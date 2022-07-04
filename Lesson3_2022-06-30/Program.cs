@@ -20,7 +20,7 @@ namespace Lesson3_2022_06_30
             //Console.WriteLine(GDC(13, 125));
             //Console.WriteLine(GetNumberOfOdd(987));
             //Console.WriteLine(ReverseNumber(554));
-            Console.WriteLine(CheckDigits(123, 156));
+            Console.WriteLine(CheckDigits(123, 34546789));
         }
 
         //1. The user enters 2 numbers (A and B). Raise the number A to the power of B.
@@ -71,7 +71,8 @@ namespace Lesson3_2022_06_30
         static int GetCountOfNumbers(int a)
         {
             int i = 0;
-            while (Math.Pow(i, 2) < a)
+
+            while ((i * i) < a)
             {
                 i++;
             }
