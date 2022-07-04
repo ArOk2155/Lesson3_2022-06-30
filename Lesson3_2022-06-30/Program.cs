@@ -12,9 +12,12 @@ namespace Lesson3_2022_06_30
             //    Console.Write(num + " ");
             //}
 
-            Console.WriteLine(GetCountOfNumbers(17));
-            //Console.WriteLine(GetLagestDivisor(1));
-            //Console.WriteLine(GetSumOfRange(21, 5));
+            //Console.WriteLine(GetCountOfNumbers(17));
+            //Console.WriteLine(GetLagestDivisor(15));
+            Console.WriteLine(GetSumOfRange(21, 5));
+            Console.WriteLine(GetSumOfRange(15, 5));
+            Console.WriteLine(GetSumOfRange(5, 15));
+            Console.WriteLine(GetSumOfRange(5, 2));
             //Console.WriteLine(GetNthNumberFibSeries(2));
             //Console.WriteLine(GetNthNumberFibSeries(5));
             //Console.WriteLine(GDC(13, 125));
@@ -85,10 +88,12 @@ namespace Lesson3_2022_06_30
         static int GetLagestDivisor (int a)
         {
             int i;
+
             for (i = a - 1; i >= 1; --i)
             {
                 if (a % i == 0) return i;
             }
+            
             return 0;
         }
 
@@ -96,12 +101,12 @@ namespace Lesson3_2022_06_30
         //5. The user enters 2 numbers(A and B). Print the sum of all numbers from the range A to B that are divisible by 7 without a remainder. (Note that B may be less than A if you type).
         static int GetSumOfRange(int a, int b)
         {
-            int sum = 0;
-
             if (b < a)
             {
                 (a, b) = (b, a); 
             }
+
+            int sum = 0;
 
             for (int i = a; i <= b; i++)
             {
@@ -110,6 +115,7 @@ namespace Lesson3_2022_06_30
                     sum += i;
                 }
             }
+            
             return sum;
         }
 
@@ -160,10 +166,8 @@ namespace Lesson3_2022_06_30
             int result = 0;
             
             do
-            {
-                int temp = (a % 10) % 2;
-                
-                if (temp != 0)
+            {               
+                if (((a % 10) % 2) != 0)
                 {
                     result++;
                 }
