@@ -12,7 +12,7 @@ namespace Lesson3_2022_06_30
             //    Console.Write(num + " ");
             //}
 
-            //Console.WriteLine(GetCountOfNumbers(10));
+            Console.WriteLine(GetCountOfNumbers(17));
             //Console.WriteLine(GetLagestDivisor(1));
             //Console.WriteLine(GetSumOfRange(21, 5));
             //Console.WriteLine(GetNthNumberFibSeries(2));
@@ -20,7 +20,7 @@ namespace Lesson3_2022_06_30
             //Console.WriteLine(GDC(13, 125));
             //Console.WriteLine(GetNumberOfOdd(987));
             //Console.WriteLine(ReverseNumber(554));
-            Console.WriteLine(CheckDigits(123, 34546789));
+            //Console.WriteLine(CheckDigits(123, 34546789));
         }
 
         //1. The user enters 2 numbers (A and B). Raise the number A to the power of B.
@@ -76,7 +76,8 @@ namespace Lesson3_2022_06_30
             {
                 i++;
             }
-            return i;
+            
+            return i - 1;
         }
 
 
